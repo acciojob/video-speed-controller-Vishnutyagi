@@ -1,2 +1,67 @@
+* {
+    box-sizing: border-box;
+}
 
-/* Your CSS Code here. */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+}
+
+.player {
+    max-width: 750px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.player__video {
+    width: 100%;
+    display: block;
+}
+
+.player__controls {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 0.3s;
+}
+
+.player:hover .player__controls {
+    transform: translateY(0);
+}
+
+.player__button {
+    background: none;
+    border: 0;
+    color: white;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.player__slider {
+    width: 100px;
+}
+
+.progress {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 5px;
+    background: #555;
+    cursor: pointer;
+}
+
+.progress__filled {
+    width: 50%;
+    background: #e91e63;
+    flex: 0;
+    flex-basis: 0%;
+}
